@@ -2,7 +2,7 @@
 My python projects
 
 
-# Python Interactive Adventure Game 🎮
+# Python Interactive Guessing Game 🎮
 
 ## Overview
 This project is a simple text-based interactive game built with Python.  

@@ -1,46 +1,23 @@
-from IPython.display import clear_output()
 
-def guess_name():
-   print("Welcome to my interactive game!")
+from games.guess_name import run as guess_name_game
+from games.number_guess import run as number_guess_game
 
-   username = input("What is your name? ")
-   print(f"Hello, {username}! Let's start the game.")
-   print('Please guess who is the winner of the latest Pall Mall game.')
+def main():
+    print("🎮 Welcome to My Python Games")
+    print("1. Name Guessing Game")
+    print("2. Number Guessing Game")
 
+    choice = input("Choose a game (1 or 2): ")
 
-   # List of valid names
-   name_list = ['Violet', 'Anthony', 'Benedict', 'Colin','Daphne', 'Eloise', 'Francesca', 'Gregory', 'Hyacinth']
+    if choice == "1":
+        guess_name_game()
+    elif choice == "2":
+        number_guess_game()
+    else:
+        print("Invalid choice.")
 
-   print("Please choose one name from the list:")
-   print(", ".join(name_list))
-
-   while True:
-        name = input("Your choice: ")
-
-        # Case 1: Name not in list
-        if name not in name_list:
-            print("❌ This name is not in the list. Please try again.")
-            continue
-
-        # Case 2: Correct answer
-        if name == 'Anthony':
-            print("Congratulations! You are correct!")
-            break
-
-        # Case 3: Wrong but valid name
-        print(" It's someone else. Guess again.")
-
-        play_again = input("Do you want to try again? (Yes / No): ").strip().lower()
-
-        if play_again == "yes":
-            continue     
-        else:
-            print(" Thanks for playing!")
-            break         
-
-
-# Run game
-guess_name()
+if __name__ == "__main__":
+    main()
 
      
      

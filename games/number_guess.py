@@ -1,7 +1,7 @@
 # Practice project in online course
 import random
 
-#create a try/except function in case the user did not eneter a valid number
+#create a try/except function in case the user did not enter a valid number
 def get_valid_number(prompt):
     while True:
         try:
